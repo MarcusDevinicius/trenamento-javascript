@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Digite uma letra:</p>
+    <input type="text" name="letra" id="letra">
+    <button onclick="clickI()">Indentificar</button>
+    <p id="res"></p>
+
+    <script>
+        function clickI() {
+            var txt = document.getElementById('letra')
+            var letra = txt.value.toUpperCase();
+            var res = document.getElementById('res')
+            if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U') {
+                res.innerText = `Você escolheu a letra ${letra} e é uma vogal`
+            } else {
+                res.innerText = `Você escolheu a letra ${letra} e é uma consoante`
+            }
+        }
+    </script>
+</body>
+</html>

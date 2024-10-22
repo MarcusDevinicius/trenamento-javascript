@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Média de aluno</h1>
+    <p>
+        <label for="n1">1º Nota: </label>
+        <input type="number" name="n1" id="n1">
+    </p>
+    <p>
+        <label for="n2">2º Nota: </label>
+        <input type="number" name="n2" id="n2">
+    </p>
+    <button onclick="veri()" >Verificar média</button>
+    <p id="res"></p>
+
+    <script>
+        function veri() {
+            var txt1 = document.getElementById('n1')
+            var n1 = Number(txt1.value)
+            var txt2 = document.getElementById('n2')
+            var n2 = Number(txt2.value)
+            var res = document.getElementById('res')
+            var media = (n1 + n2) / 2
+            if (media < 7) {
+                res.innerHTML = `A sua média foi ${media} e você está <strong>REPROVADO</strong>`
+            } else if (media >= 7 && media < 10) {
+                res.innerHTML = `A sua média foi ${media} e você está APROVADO`
+            } else {
+                res.innerHTML = `A sua média foi ${media} e você está APROVADO COM DISTINÇÃO`
+            }
+
+        }
+    </script>
+</body>
+</html>
