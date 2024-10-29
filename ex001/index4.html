@@ -15,16 +15,24 @@
         <label for="n2">Segundo número: </label>
         <input type="number" name="n2" id="n2">
     </p>
-    <button onclick="clicou()">Rodar</button>
+    <button onclick="clicou()">Inverter</button>
     <p id="res"></p>
 
     <script>
         function clicou() {
             var txt1 = document.getElementById('n1')
-            var n1 = Number(txt1.value);
             var txt2 = document.getElementById('n2')
+            var n1 = Number(txt1.value);
             var n2 = Number(txt2.value);
-            window.alert(`${n1} e ${n2}`)
+            var auxi = n1
+            n1 = n2
+            n2 = auxi
+            window.alert(`Antes: \n `+
+                         `O primeiro = ${auxi}\n` +
+                         `O segundo = ${n2}\n` +
+                         `Despois: \n` +
+                         `O primero = ${auxi}\n` +
+                         `O segundo = ${n2}`)
         }
     </script>
 </body>
